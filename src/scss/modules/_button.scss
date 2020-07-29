@@ -1,0 +1,27 @@
+.button {
+    padding-bottom: 15px;
+    padding-top: 17px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    color: $portGore;
+    font-family: $mainFont;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button--active {
+    background-color: $portGore;
+    color: #ffffff;
+    font-family: $specialFont;
+    font-size: 17px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 25.5px;
+    text-transform: uppercase;
+}

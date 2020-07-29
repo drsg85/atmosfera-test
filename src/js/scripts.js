@@ -1,6 +1,4 @@
-// 'use strict';
-// import MobileMenu from './modules/MobileMenu';
-// import ToTop from './modules/toTop';
+'use strict';
+import ThemeSwitcher from './modules/themeSwitcher';
 
-// const mobileMenu = new MobileMenu();
-// new ToTop();
+new ThemeSwitcher();
