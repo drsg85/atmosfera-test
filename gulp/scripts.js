@@ -5,9 +5,6 @@ import webpack from 'webpack-stream';
 const config = {
   entry: {
     main: './src/js/main.js',
-    city: './src/js/city.js',
-    branch: './src/js/branch.js',
-    dummy: './src/js/dummy.js',
     scripts: './src/js/scripts.js'
   },
 

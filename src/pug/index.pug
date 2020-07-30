@@ -9,14 +9,18 @@ html(lang="en")
 
         title Atmosfera-cat
         
-    body
+    body.body
         main
             section.catcall
                 .catcall__container
-                    .catcall__image
+                    .catcall__image#toggle-theme
                         img(src="./img/cat.jpg", alt="Изображение кота в очках")
                     .catcall__conntent
                         h2.catcall__question Ты действительно готов сделать это?
                         .catcall__buttons
                             button.button.button--active Git push
-                            button.button нет, я уже передумал
+                            button.button нет, я уже передумал 
+                            //- не определился наверняка со второй кнопкой, возможно, уместнее было бы сделать тег <a>, но нужно знать, что будет происодить при нажатии
+
+        
+        script(src="scripts.js")

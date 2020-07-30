@@ -1,13 +1,17 @@
 class ThemeSwitcher {
     constructor() {
-        this.themeSwitcherButton = document.querySelector('.catcall__image');
+        this.toggleBtn = document.querySelector("#toggle-theme");
         this.events();
     }
 
     events() {
-        this.themeSwitcherButton.addEventListener('click', () => {
-            // this.document.body.classList.toggle('body--dark');
-            console.log('1');
+        this.toggleBtn.addEventListener('click', (e) => {
+            if (document.documentElement.hasAttribute('theme')) {
+                document.documentElement.removeAttribute('theme');
+            }
+            else {
+                document.documentElement.setAttribute('theme', 'dark');
+            }
         });
     }
 }

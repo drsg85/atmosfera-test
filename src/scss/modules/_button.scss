@@ -1,10 +1,11 @@
 .button {
+    position: relative;
     padding-bottom: 15px;
     padding-top: 17px;
     background-color: transparent;
     border: none;
     border-radius: 8px;
-    color: $portGore;
+    color: var(--button-color);
     font-family: $mainFont;
     font-size: 15px;
     font-style: italic;
@@ -13,10 +14,14 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    transition: ease-in-out 0.2s;
+    outline: none;
+    overflow: hidden;
 }
 
 .button--active {
-    background-color: $portGore;
+    background-color: var(--button-color);
+    box-shadow: var(--button-shadow);
     color: #ffffff;
     font-family: $specialFont;
     font-size: 17px;
@@ -24,4 +29,33 @@
     letter-spacing: normal;
     line-height: 25.5px;
     text-transform: uppercase;
+    transition: ease-in-out 0.2s;
+}
+
+// стили для наведения на десктопных устройствах
+.button:hover {
+    opacity: 0.8;
+}
+
+// стили для анимации при нажатии на кнопку
+.button span {
+    position: absolute;
+    background-color: $light;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 0.3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }
